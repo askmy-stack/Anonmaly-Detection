@@ -12,6 +12,7 @@ from anomaly_detection.models.ml.lof import LOFDetector
 from anomaly_detection.models.ml.ocsvm import OneClassSVMDetector
 from anomaly_detection.models.statistical.iqr import IQRDetector
 from anomaly_detection.models.statistical.zscore import ZScoreDetector
+from anomaly_detection.multimodal.fusion import MultimodalFusion
 
 DETECTOR_REGISTRY: dict[str, type[BaseDetector]] = {
     "zscore": ZScoreDetector,
@@ -21,6 +22,7 @@ DETECTOR_REGISTRY: dict[str, type[BaseDetector]] = {
     "one_class_svm": OneClassSVMDetector,
     "autoencoder": AutoencoderDetector,
     "diffusion": DiffusionDetector,
+    "multimodal_fusion": MultimodalFusion,
 }
 
 

@@ -145,6 +145,8 @@ Start the server with `serve` (or `uvicorn anomaly_detection.api.app:app`). Inte
 | `/detect` | POST | Detect anomalies from a 2D numeric array + optional config override |
 | `/detect/batch` | POST | Upload a CSV file for batch detection |
 | `/models` | GET | List registered detector names |
+
+Registered detectors include `zscore`, `iqr`, `isolation_forest`, `lof`, `one_class_svm`, `autoencoder`, `diffusion`, and `multimodal_fusion` (tabular + text; requires `texts` at fit/score).
 | `/root_cause` | POST | Rank root causes for an anomaly given multivariate metrics |
 | `/root_cause/{anomaly_id}` | GET | Retrieve a cached RCA result |
 | `/explain` | POST | Generate plain-language anomaly explanation (LLM opt-in) |
